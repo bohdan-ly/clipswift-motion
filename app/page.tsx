@@ -11,7 +11,6 @@ import Tech from 'components/landing/techSection';
 import Footer from 'components/landing/footer';
 import CustomCursor from 'components/custom-cursor';
 import SolutionSection from '@/components/landing/bundles/solution-section';
-import Track from 'components/landing/track';
 
 export default function Home() {
   return (
@@ -34,9 +33,6 @@ export default function Home() {
         <Footer />
       </ReactLenis>
       {/* <CustomCursor /> */}
-      <Suspense>
-        <Track />
-      </Suspense>
     </>
   );
 }

@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 import { useNav } from '@/context/nav-context';
 import { useIntersectionObserver } from '@/hooks/use-intersector';
-import track from '@/lib/tail-track';
 import { Button } from 'components/ui/button';
 import StaggerText from 'components/ui/staggerText';
 import BundleCard from './bundle-card';

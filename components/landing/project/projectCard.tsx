@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { projects } from '@/config/project';
 import { Badge } from '@/components/ui/badge';
-import track from '@/lib/tail-track';
 
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   const bagdeClass = {
@@ -45,7 +44,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              onClick={() => track({ click: `${project.name}-live` })}
+              // onClick={() => track({ click: `${project.name}-live` })}
             >
               <Button
                 className="px-0 group uppercase tracking-wider text-para-xm transition-all"
