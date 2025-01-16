@@ -79,11 +79,17 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow: hidden;
   }
 
   .project-card::before {
     @apply bg-zinc-950/30;
   }
+}
+
+html {
+  width: -webkit-fill-available;
+  overflow-x: hidden;
 }
 
 html.lenis {

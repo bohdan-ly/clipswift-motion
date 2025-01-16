@@ -46,9 +46,9 @@ function Navbar() {
             // target="_blank"
             // rel="noopener noreferrer"
             prefetch={false}
-            className="mx-auto"
+            className="ml-auto md:mx-auto"
           >
-            <Button variant="cfa" size="lg" className="-translate-x-[50%] rounded-full">
+            <Button variant="cfa" size="lg" className="md:-translate-x-[50%] rounded-full">
               {/* <span className="w-3 h-3 relative mr-2">
                 <span className="size-full absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
                   <span className="size-full block rounded-full bg-green-400 animate-ping" />

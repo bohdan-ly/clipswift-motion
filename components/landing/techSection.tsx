@@ -55,7 +55,7 @@ function Tech() {
             text={`How we’ll help you position and grow`}
             className="text-center text-heading text-zinc-900 font-medium relative z-[1]"
           />
-          <h2 className="absolute z-0 left-[50%] -translate-x-[50%] -top-28 text-black/5 text-[12rem] font-semibold leading-[105%]">
+          <h2 className="absolute z-0 left-[50%] -translate-x-[50%] -top-12 md:-top-28 text-black/5 text-8xl md:text-[12rem] font-semibold leading-[105%]">
             Process
           </h2>
         </div>
@@ -139,7 +139,7 @@ function Tech() {
           </div>
         ))} */}
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-14 mt-20 w-full">
+        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-14 md:mt-20 w-full">
           {['zapier', 'ga', 'ae', 'figma', 'notion'].map((i) => (
             <div key={i} className="w-auto h-8">
               <Image

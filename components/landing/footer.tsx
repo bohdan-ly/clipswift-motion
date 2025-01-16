@@ -95,7 +95,7 @@ function Footer() {
         <div className="flex flex-col flex-1 gap-6 md:gap-10 justify-start">
           <StaggerText
             text="See if ClipSwift is the right fit for you"
-            className="text-heading font-medium w-[20vw] leading-[100%]"
+            className="text-heading font-medium md:w-[20vw] leading-[100%]"
           />
           <p className="text-para bg-gradient-to-r from-csmint to-cslime bg-clip-text text-transparent -mt-4">
             (it totally is)
@@ -146,7 +146,7 @@ function Footer() {
           </div>
           <p className="mt-4">Headquartered in Warsaw, Poland</p>
         </div>
-        <div className="flex flex-1">
+        <div className="flex flex-1 w-full md:w-auto">
           <Booker />
         </div>
         {/* <div className="flex-[2_2_0%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-12 xl:gap-16 z-20">
