@@ -49,7 +49,7 @@ export default function Projects() {
       </div>
       <div ref={ref} className="bg-white">
         <div
-          id="projects"
+          id="showcases"
           className={'px-5 md:px-0 relative md:h-[calc(40vh*12)] bg-background rounded-b-3xl'}
           ref={targetRef}
         >
@@ -72,7 +72,7 @@ export default function Projects() {
                 <Button size="lg" variant="cfa" asChild>
                   <Link
                     className="mt-8 mb-10 md:mb-0 md:mt-auto w-fit"
-                    href={'https://www.linkedin.com/in/nishchay-trivedi-61219978'}
+                    href={'https://www.youtube.com/@clip_swift1'}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

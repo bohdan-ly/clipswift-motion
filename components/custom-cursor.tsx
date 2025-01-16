@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useAnimate, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useAnimate, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -13,10 +13,10 @@ export default function CustomCursor() {
       });
     }
 
-    window.addEventListener("pointermove", handlePointer);
+    window.addEventListener('pointermove', handlePointer);
 
     return () => {
-      window.removeEventListener("pointermove", handlePointer);
+      window.removeEventListener('pointermove', handlePointer);
     };
   }, []);
 
@@ -25,10 +25,10 @@ export default function CustomCursor() {
       animate={{
         ...mousePosition,
       }}
-      transition={{ type: "tween", duration: 0.1, ease: "linear" }}
+      transition={{ type: 'tween', duration: 0.1, ease: 'linear' }}
       className={
-        "fixed z-50 top-0 left-0 rounded-full pointer-events-none select-none" +
-        " mix-blend-difference size-3 bg-yellow-400 hidden md:block print:hidden"
+        'fixed z-50 top-0 left-0 rounded-full pointer-events-none select-none' +
+        ' mix-blend-difference size-3 bg-yellow-400 hidden md:block print:hidden'
       }
     />
   );

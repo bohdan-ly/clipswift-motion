@@ -33,7 +33,7 @@ export default function Home() {
         <SolutionSection />
         <Footer />
       </ReactLenis>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Suspense>
         <Track />
       </Suspense>

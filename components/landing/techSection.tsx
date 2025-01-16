@@ -43,11 +43,7 @@ function Tech() {
         </div> */}
       </Marquee>
 
-      <section
-        className="container px-6 pb-24 md:px-12 flex flex-col bg-white"
-        id="skills"
-        ref={ref}
-      >
+      <section ref={ref} className="container px-6 pb-24 md:px-12 flex flex-col bg-white">
         {/* <div className="absolute left-0 -top-20 z-[5] w-full h-56 bg-gradient-to-b from-black via-zinc-500 to-transparent" /> */}
 
         <div
@@ -63,7 +59,7 @@ function Tech() {
             Process
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-10">
+        <div id="our_process" className="flex flex-wrap justify-center gap-4 md:gap-6 mb-10">
           <Card {...PROCESS[0]}>
             <Image
               width={30}

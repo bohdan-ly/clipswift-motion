@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { cn } from "@/lib/utils";
-import { NAV_ITEMS, useNav } from "@/context/nav-context";
+import { cn } from '@/lib/utils';
+import { NAV_ITEMS, useNav } from '@/context/nav-context';
 
 function StickyNav() {
   const { handleCurrentNav, currentIdx } = useNav();
@@ -17,12 +17,12 @@ function StickyNav() {
             onClick={() => {
               handleCurrentNav(it);
               document
-                ?.querySelector(`#${it.toLocaleLowerCase()}`)
-                ?.scrollIntoView({ behavior: "smooth" });
+                ?.querySelector(`#${it.replace(' ', '_').toLocaleLowerCase()}`)
+                ?.scrollIntoView({ behavior: 'smooth' });
             }}
             className={cn(
-              "relative transition cursor-pointer font-light px-2 md:px-3 py-1 md:py-1.5 text-xs md:text-sm",
-              currentIdx != idx && "hover:text-slate-300"
+              'relative transition cursor-pointer font-light px-2 md:px-3 py-1 md:py-1.5 text-xs md:text-sm',
+              currentIdx != idx && 'hover:text-slate-300',
             )}
           >
             {currentIdx === idx && (
@@ -30,7 +30,7 @@ function StickyNav() {
                 layoutId="bubble"
                 className="absolute inset-0 z-10 bg-white mix-blend-difference"
                 style={{ borderRadius: 36 }}
-                transition={{ type: "spring", bounce: 0.1, duration: 0.6 }}
+                transition={{ type: 'spring', bounce: 0.1, duration: 0.6 }}
               />
             )}
             {it}

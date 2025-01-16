@@ -53,8 +53,7 @@ const bundles = [
         Supercharger
       </span>
     ),
-    description: `Build a strong video foundation with the essential resources you need to grow and impress 
-    your clients. This level is crafted to give you a starting point that guarantees success.`,
+    description: `Elevate your video performance with personalized strategies, hands-on guidance, and the expertise you need to reach peak efficiency and maximize your growth.`,
     features: [
       'Unlimited videos',
       'Partner ecosystem',
@@ -72,8 +71,7 @@ const bundles = [
         Dominator
       </span>
     ),
-    description: `Build a strong video foundation with the essential resources you need to grow and impress 
-    your clients. This level is crafted to give you a starting point that guarantees success.`,
+    description: `Position your agency as a leader in your space with a fully managed video solution that provides high-end strategy and execution, to impress your clients and drive unparalleled success.`,
     features: [
       'Unlimited videos',
       'Partner ecosystem',
@@ -95,8 +93,7 @@ const bundles = [
         </span>
       </>
     ),
-    description: `Build a strong video foundation with the essential resources you need to grow and impress 
-    your clients. This level is crafted to give you a starting point that guarantees success.`,
+    description: `A dedicated team of experienced professionals, operating as a seamless extension of your agency, providing the technical expertise you need to deliver cutting-edge videos.`,
     features: ['Partner ecosystem'],
   },
 ];
@@ -120,9 +117,10 @@ export const variants = {
   },
 };
 
-const keys = features
-  .values()
-  .reduce((a, v) => ({ ...a, [v.id]: bundles[0].features.includes(v.title) }), {});
+const keys = features.reduce(
+  (a, v) => ({ ...a, [v.id]: bundles[0].features.includes(v?.title) }),
+  {},
+);
 
 type BundleSetupProps = {
   projectsAmount: number;
@@ -303,6 +301,7 @@ function BundleCard({ className }: { className?: string }) {
                   id={feature.id}
                   type="checkbox"
                   checked={bundleSetup[feature.id as keyof BundleSetupProps] as unknown as boolean}
+                  onChange={() => {}}
                   className="checked:bg-purple-600 checked:border-purple-600 peer cursor-pointer transition-all appearance-none pointer-events-none w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-csblue focus:ring-2"
                 />
                 <CheckIcon className="w-4 h-4 absolute left-0 top-[50%] -translate-y-[50%]" />

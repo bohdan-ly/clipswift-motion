@@ -42,9 +42,9 @@ function Navbar() {
             <h2 className="tracking-wider text-sm sr-only">ClipSwift</h2>
           </div>
           <Link
-            href={'https://calendly.com/clip-swift/30min'}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={'#contact'}
+            // target="_blank"
+            // rel="noopener noreferrer"
             prefetch={false}
             className="mx-auto"
           >
