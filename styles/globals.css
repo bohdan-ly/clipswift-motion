@@ -28,6 +28,12 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    --cs-blue: 223 99% 44%;
+
+    --cs-mint: 169 100% 91%;
+
+    --cs-lime: 76 100% 72%;
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
@@ -36,7 +42,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 7.06%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -70,9 +76,11 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   .project-card::before {
     @apply bg-zinc-950/30;
   }
@@ -100,4 +108,40 @@ html.lenis {
 
 .transform-bottom-center::before {
   transform-origin: bottom center;
+}
+
+.card-front {
+  transform: translate3d(0, 0, 0.01px);
+  aspect-ratio: 3/2;
+
+  box-shadow: 0 30px 40px -25px rgba(15, 5, 20, 1), 0 20px 50px -15px rgba(15, 5, 20, 1);
+  overflow: hidden;
+  /* animation: tilt var(--duration) ease infinite; */
+  image-rendering: optimizequality;
+}
+
+.button-filled {
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+  color: #fff;
+  background-image: linear-gradient(#444, #000);
+  border: 1px solid #000;
+  /* border-radius: 8px; */
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .2s;
+  display: inline-flex;
+  box-shadow: 0 1px 2px #0000004d, 0 0 #000, inset 1px 1px .25px #ffffff4d, inset 0 2px 1px #ffffff80
+}
+
+.button-filled.tag {
+  background-image: linear-gradient(#006161, #1878ff);
+}
+
+.slider {
+  @apply [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-black/25 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-purple-600;
 }

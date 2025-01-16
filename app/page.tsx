@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { Suspense } from "react";
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { Suspense } from 'react';
+import { ReactLenis } from '@studio-freight/react-lenis';
 
-import Hero from "@/components/landing/hero";
-import Navbar from "@/components/landing/nav/landing-nav";
-import StickyNav from "@/components/landing/nav/sticky-nav";
-import Projects from "@/components/landing/project/projectsSection";
-import Tech from "@/components/landing/techSection";
-import Footer from "@/components/landing/footer";
-import CustomCursor from "@/components/custom-cursor";
-import ResumeSection from "@/components/landing/resume/resume-section";
-import Track from "@/components/landing/track";
+import Hero from 'components/landing/hero';
+import Navbar from 'components/landing/nav/landing-nav';
+import StickyNav from 'components/landing/nav/sticky-nav';
+import Projects from 'components/landing/project/projectsSection';
+import Tech from 'components/landing/techSection';
+import Footer from 'components/landing/footer';
+import CustomCursor from 'components/custom-cursor';
+import SolutionSection from '@/components/landing/bundles/solution-section';
+import Track from 'components/landing/track';
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
         <StickyNav />
         <Projects />
         <Tech />
-        <ResumeSection />
+        <SolutionSection />
         <Footer />
       </ReactLenis>
       <CustomCursor />

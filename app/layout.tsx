@@ -1,35 +1,39 @@
-import "../styles/globals.css";
+import '../styles/globals.css';
 
-import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import type { Metadata } from 'next';
+import { Mulish, Poppins } from 'next/font/google';
 
-import Analytics from "./Analytics";
-import Providers from "./Providers";
+import Analytics from './Analytics';
+import Providers from './Providers';
 
-const mulish = Mulish({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  style: ['normal'],
+});
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Nishchay",
-    default: "Nishchay",
+    template: '%s | Nishchay',
+    default: 'ClipSwift | AI-powered All-in-One brand manager for social media',
   },
-  description: "Portfolio made with Next JS | Nishchay17",
-  icons: ["/svg/logo-new.svg"],
-  keywords: ["Next.js", "React", "Portfolio", "Nishchay", "Nishchay17"],
+  description: 'AI-powered All-in-One brand manager for social media',
+  icons: ['/svg/symbol.svg'],
+  keywords: ['social media', 'brand manager', 'motion design', 'video editing', 'video ads'],
   authors: [
     {
-      name: "nishchay17",
+      name: 'ClipSwift',
     },
   ],
-  creator: "nishchay17",
-  metadataBase: new URL("https://www.nishchay17.com"),
+  creator: 'ClipSwift',
+  metadataBase: new URL('https://www.clip-swift.com'),
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://www.nishchay17.com",
-    title: "Nishchay17",
-    description: "Portfolio made with Next JS | Nishchay17",
-    siteName: "Nishchay17",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.clip-swift.com',
+    title: 'ClipSwift | AI-powered All-in-One brand manager for social media',
+    description: 'AI-powered All-in-One brand manager for social media',
+    siteName: 'AI-powered All-in-One brand manager',
   },
 };
 
@@ -41,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <Analytics />
-      <body className={mulish.className}>
+      <body className={poppins.className}>
         <Providers>{children}</Providers>
       </body>
     </html>

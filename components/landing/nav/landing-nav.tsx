@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import Link from "next/link";
+import { useState } from 'react';
+import Image from 'next/image';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import Link from 'next/link';
 
-import { Button } from "@/ui/button";
+import { Button } from 'components/ui/button';
 
 function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, 'change', (latest) => {
     const prev = scrollY.getPrevious() ?? 0;
     if (latest < prev && latest < 10) {
       setHidden(false);
@@ -29,7 +29,7 @@ function Navbar() {
       <motion.div
         variants={variants}
         initial={{ opacity: 0, y: -50 }}
-        animate={hidden ? "hidden" : "visible"}
+        animate={hidden ? 'hidden' : 'visible'}
         transition={{
           ease: [0.1, 0.25, 0.3, 1],
           duration: 0.6,
@@ -38,23 +38,24 @@ function Navbar() {
       >
         <div className="flex justify-between items-center container max-w-[1400px] py-4">
           <div className="flex gap-3 items-center">
-            <Image src="/svg/logo.svg" alt="logo" width={14} height={14} />
-            <h2 className="tracking-wider text-sm">Nishchay</h2>
+            <Image src="/svg/logo.svg" alt="logo" width={200} height={100} />
+            <h2 className="tracking-wider text-sm sr-only">ClipSwift</h2>
           </div>
           <Link
-            href={"https://www.linkedin.com/in/nishchay17"}
+            href={'https://calendly.com/clip-swift/30min'}
             target="_blank"
             rel="noopener noreferrer"
             prefetch={false}
+            className="mx-auto"
           >
-            <Button variant="outline" size="sm">
-              <span className="w-3 h-3 relative mr-2">
+            <Button variant="cfa" size="lg" className="-translate-x-[50%] rounded-full">
+              {/* <span className="w-3 h-3 relative mr-2">
                 <span className="size-full absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
                   <span className="size-full block rounded-full bg-green-400 animate-ping" />
                 </span>
                 <span className="size-[70%] rounded-full bg-green-500 absolute inset-1/2 -translate-x-1/2 -translate-y-1/2" />
-              </span>
-              <p>Open to work</p>
+              </span> */}
+              <p>Book a call</p>
             </Button>
           </Link>
         </div>
