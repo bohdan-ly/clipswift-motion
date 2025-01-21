@@ -12,10 +12,12 @@ import RevealBox from '@/ui/revealBox';
 import ProjectCard from './projectCard';
 import { useIntersectionObserver } from '@/hooks/use-intersector';
 import { useNav } from '@/context/nav-context';
+import Image from 'next/image';
+import Marquee from 'react-fast-marquee';
 
 export default function Projects() {
   const { scrollYProgress } = useScroll();
-  const translateX = useTransform(scrollYProgress, [0, 1], [-1000, 1000]);
+  const translateX = useTransform(scrollYProgress, [0, 1], [-10, 1000]);
   const targetRef = useRef<HTMLDivElement | null>(null);
   const horizontalScroll = useScroll({
     target: targetRef,
@@ -33,19 +35,36 @@ export default function Projects() {
   return (
     <div className="border-t-[0.5px] border-white/20 relative z-10">
       <div className="overflow-hidden whitespace-nowrap px-2 my-4 select-none">
-        <motion.div style={!isMobile ? { translateX } : {}}>
-          {Array(40)
-            .fill('Show case')
-            .map((it, idx) => (
-              <span
-                aria-disabled="true"
-                className="text-para-sm opacity-40 mr-4 uppercase"
-                key={idx}
-              >
-                {it}{' '}
+        <motion.div className="gap-12 hidden md:flex" style={!isMobile ? { translateX } : {}}>
+          {['binance', 'u1core', 'lunar', 'dizarm', 'youtube', 'mindai', 'inbuco', 'coinbound'].map(
+            (it, idx) => (
+              <span aria-disabled="true" className="text-para-sm opacity-40 uppercase" key={idx}>
+                <Image
+                  width={100}
+                  height={26}
+                  alt={`${it} logo`}
+                  src={`/svg/clients/${it}.svg`}
+                  className="h-[26px] w-auto"
+                />
               </span>
-            ))}
+            ),
+          )}
         </motion.div>
+        <Marquee gradient gradientColor="#121212" gradientWidth={100} className="">
+          {['binance', 'u1core', 'lunar', 'dizarm', 'youtube', 'mindai', 'inbuco', 'coinbound'].map(
+            (it, idx) => (
+              <div aria-disabled="true" className="opacity-40 px-8" key={idx}>
+                <Image
+                  width={100}
+                  height={26}
+                  alt={`${it} logo`}
+                  src={`/svg/clients/${it}.svg`}
+                  className="h-[26px] w-auto"
+                />
+              </div>
+            ),
+          )}
+        </Marquee>
       </div>
       <div ref={ref} className="bg-white">
         <div

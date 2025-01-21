@@ -79,7 +79,6 @@
 
   body {
     @apply bg-background text-foreground;
-    overflow: hidden;
   }
 
   .project-card::before {
