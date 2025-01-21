@@ -226,10 +226,10 @@ function BundleCard({ className }: { className?: string }) {
         <div className="absolute inset-0 z-[-2] bg-zinc-900 bg-[radial-gradient(100%_100%_at_20%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]" />
         <div className="flex gap-4 justify-center w-full flex-wrap">
           {bundles.map((b) => (
-            <div
+            <button
               key={b.id}
               className={cn(
-                'px-4 py-2 border border-dashed border-zinc-400 rounded-full min-w-[133px] text-center',
+                'pointer px-4 py-2 border border-dashed border-zinc-400 rounded-full min-w-[133px] text-center',
                 {
                   'button-filled': selectedBundle === b.id,
                 },
@@ -237,7 +237,7 @@ function BundleCard({ className }: { className?: string }) {
               onClick={() => handleSelectBundle(b.id)}
             >
               {b.title}
-            </div>
+            </button>
           ))}
         </div>
         <p className="text-xl font-medium text-center mt-16">
