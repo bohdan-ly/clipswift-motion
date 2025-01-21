@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <div className="border-t-[0.5px] border-white/20 relative z-10">
       <div className="overflow-hidden whitespace-nowrap px-2 my-4 select-none">
-        <motion.div className="gap-12 hidden md:flex" style={!isMobile ? { translateX } : {}}>
+        {/* <motion.div className="gap-12 hidden md:flex" style={!isMobile ? { translateX } : {}}>
           {['binance', 'u1core', 'lunar', 'dizarm', 'youtube', 'mindai', 'inbuco', 'coinbound'].map(
             (it, idx) => (
               <span aria-disabled="true" className="text-para-sm opacity-40 uppercase" key={idx}>
@@ -49,7 +49,7 @@ export default function Projects() {
               </span>
             ),
           )}
-        </motion.div>
+        </motion.div> */}
         <Marquee gradient gradientColor="#121212" gradientWidth={100} className="">
           {['binance', 'u1core', 'lunar', 'dizarm', 'youtube', 'mindai', 'inbuco', 'coinbound'].map(
             (it, idx) => (
